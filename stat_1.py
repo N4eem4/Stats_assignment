@@ -2,17 +2,21 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 df = pd.read_csv("student_grades.csv")
-mean = df["Final Grade"].mean()
-min = df["Final Grade"].min()
-max = df["Final Grade"].max()
-median = df["Final Grade"].median()
+min = df["Midterm Grade"].min()
+max = df["Midterm Grade"].max()
+median = df["Midterm Grade"].median()
 
-lower = df["Final Grade"].max() * 0.25
-upper = df["Final Grade"].max() * 0.75
+lower = df["Final Grade"].quantile(0.25) 
+upper = df["Final Grade"].quantile(0.75)
 interquartile = upper - lower
 
-print(mean)
+
+highRange = df["Attendance Grade"].max()
+lowRange = df["Attendance Grade"].min()
+range = highRange - lowRange
+
 print(min)
 print(max)
 print(median)
 print(interquartile)
+print(range)
