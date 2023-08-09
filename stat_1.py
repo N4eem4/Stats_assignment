@@ -15,8 +15,8 @@ highRange = df["Attendance Grade"].max()
 lowRange = df["Attendance Grade"].min()
 range = highRange - lowRange
 
-print(min)
-print(max)
-print(median)
-print(interquartile)
-print(range)
+print("the minimum midterm grade is ", min)
+print("the maximum midterm grade is ", max)
+print("THe median midterm grade is ", median)
+print("the interquartile range of the final grade is ", interquartile)
+print("the range of the attendance grade is ", range)
